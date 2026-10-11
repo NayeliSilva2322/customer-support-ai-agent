@@ -1,0 +1,5 @@
+[
+  {"ts": "2025-10-29T09:10:00Z", "level": "INFO", "msg": "User login successful"},
+  {"ts": "2025-10-29T09:12:00Z", "level": "ERROR", "msg": "Application crashed on startup"},
+  {"ts": "2025-10-29T09:15:00Z", "level": "WARN", "msg": "Low battery warning"}
+]

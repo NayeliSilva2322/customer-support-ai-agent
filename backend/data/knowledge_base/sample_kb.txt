@@ -1,0 +1,64 @@
+AGENTE DE SOPORTE MULTIMODAL - BASE DE CONOCIMIENTO
+
+====================================================
+
+ERRORES COMUNES DEL DISPOSITIVO Y SOLUCIÓN DE PROBLEMAS
+
+Código de Error 101: Fallo de Conexión a la Red / Wi-Fi
+
+Descripción: El dispositivo no puede comunicarse con la red local ni con el servidor backend.
+
+Causa: Señal débil, configuración de red incorrecta o restricciones del cortafuegos (firewall).
+
+Solución:
+
+Reinicie el router Wi-Fi y espere 60 segundos.
+
+Verifique la configuración de red en Ajustes > Red > Diagnosticar Conexión.
+
+Asegúrese de que el puerto 443 (HTTPS) no esté bloqueado por cortafuegos locales.
+
+Código de Error 202: Sistema No Responde / Pantalla Congelada
+
+Descripción: Los elementos de la interfaz de usuario dejan de responder a la interacción.
+
+Causa: Fuga de memoria o bloqueo de subprocesos en el entorno de ejecución de la aplicación.
+
+Solución:
+
+Realice un reinicio forzado del sistema manteniendo presionado el botón de encendido durante 10 segundos.
+
+Limpie la memoria caché temporal navegando a Ajustes > Almacenamiento > Limpiar Caché.
+
+Verifique que el software del agente esté actualizado a la última versión.
+
+Código de Error 303: Error de Hardware de Entrada de Visión
+
+Descripción: El sistema no logra capturar o decodificar la transmisión de imagen desde las cámaras conectadas.
+
+Causa: Módulo de cámara desconectado, controladores USB faltantes o alimentación de energía insuficiente.
+
+Solución:
+
+Desconecte y vuelva a conectar el módulo de cámara en un puerto USB 3.0 o superior.
+
+Reinstale los controladores de visión predeterminados mediante el script de despliegue en el backend.
+
+Verifique que el sistema tenga concedidos los permisos de cámara para el servicio multimodal_support_agent.
+
+PREGUNTAS FRECUENTES (FAQ)
+
+¿Cómo actualizo el software del agente?
+Respuesta: Navegue a Ajustes > Actualización del Sistema, o ejecute el comando pip install --upgrade -r requirements.txt en la terminal desde el directorio raíz de la aplicación.
+
+¿Qué formatos de imagen son compatibles con el Módulo de Visión?
+Respuesta: El procesador de visión admite formatos estándar como .jpg, .jpeg, .png y .webp. Las imágenes deben pesar preferentemente menos de 10 MB.
+
+¿Dónde se guardan los registros de diagnóstico?
+Respuesta: Los registros (logs) de diagnóstico del sistema se almacenan localmente en el directorio backend/logs/ en formato JSON (app_debug.log).
+
+PROTOCOLO DE ESCALACIÓN Y SOPORTE DEL AGENTE
+
+Soporte Nivel 1: Resolución automática utilizando esta base de conocimiento a través del Módulo RAG.
+
+Soporte Nivel 2: Si el problema persiste tras realizar los pasos anteriores, escale el caso a ingeniería de sistemas enviando un correo a soporte@agente-multimodal.local adjuntando los registros del sistema.

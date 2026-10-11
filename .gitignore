@@ -1,0 +1,9 @@
+.env*
+!.env.example
+.venv/
+code/agentes/
+**/__pycache__/
+graphify-out/
+.vscode/
+backend/data/ltm/*.sqlite3
+backend/data/ltm/*.json

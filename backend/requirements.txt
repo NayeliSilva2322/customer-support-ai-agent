@@ -1,0 +1,14 @@
+requests==2.31.0
+transformers==4.45.0
+torch>=2.1.0
+sentence-transformers==2.2.2
+faiss-cpu
+fastapi
+uvicorn[standard]
+gunicorn
+python-dotenv
+pillow
+python-multipart
+huggingface_hub
+accelerate
+langfuse>=3.0,<4

@@ -1,0 +1,7 @@
+# Solo desarrollo local: expone la API y monta el código
+services:
+  backend:
+    ports: ["8000:8000"]
+    volumes:
+      - ./backend:/app
+      - ltm_data:/app/data/ltm

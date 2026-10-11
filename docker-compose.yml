@@ -1,0 +1,39 @@
+name: soporte-multimodal
+
+services:
+  backend:
+    build: ./backend
+    image: soporte-multimodal/backend:latest
+    env_file: .env
+    environment:
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-2.5-flash}
+    volumes:
+      - ltm_data:/app/data/ltm
+      - hf_cache:/app/.cache/huggingface
+    expose:
+      - "8000"
+    networks: [internal]
+    restart: unless-stopped
+    read_only: false
+    security_opt: ["no-new-privileges:true"]
+
+  frontend:
+    build: ./frontend
+    image: soporte-multimodal/frontend:latest
+    environment:
+      API_ROOT: http://backend:8000
+    ports:
+      - "${FRONTEND_PORT:-8501}:8501"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks: [internal]
+    restart: unless-stopped
+    security_opt: ["no-new-privileges:true"]
+
+volumes:
+  ltm_data:
+  hf_cache:
+
+networks:
+  internal:
