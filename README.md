@@ -555,9 +555,3 @@ y abre `/docs` para verificar que la API arrancó.
 El procesamiento requiere que BLIP-2 y sus dependencias estén disponibles y
 que el modelo pueda cargarse en el entorno. Prueba primero el flujo de texto
 sin imagen para verificar el resto del pipeline.
-
-## Licencia
-
-Este repositorio no incluye actualmente un archivo `LICENSE`. Antes de
-redistribuir el proyecto o aceptar contribuciones con condiciones de uso
-concretas, añade una licencia que refleje los derechos que deseas conceder.
